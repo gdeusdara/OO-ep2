@@ -1,19 +1,15 @@
 package view;
 
-import java.awt.EventQueue;
+import java.io.IOException;
+
+import javax.swing.JFrame;
 
 public class Main {
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					paginaInicial frame = new paginaInicial();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	public static void main(String [] args) throws IOException{
+		JFrame telaInicial = new JFrame();
+		telaInicial.setLocationRelativeTo(null);
+		telaInicial.setResizable(false);
+		new PaginaInicial(telaInicial);
 	}
 }
+
