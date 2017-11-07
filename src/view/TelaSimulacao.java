@@ -15,19 +15,19 @@ import javax.swing.JButton;
 import javax.swing.JSlider;
 import javax.swing.JSeparator;
 
-public class Simulacao {
+public class TelaSimulacao {
 
-	private JPanel simulacao;
+	private JPanel simulador;
 	private JTextField txtAmplitude;
 	private JTextField textAngulo;
 	private JTextField textCorrente;
 
-	public Simulacao(JFrame tela) {
+	public TelaSimulacao(JFrame tela) {
 		tela.setBounds(100, 100, 650, 500);
 		tela.setLocationRelativeTo(null);
 		
-		simulacao = new JPanel();
-		simulacao.setBorder(new EmptyBorder(5, 5, 5, 5));
+		simulador = new JPanel();
+		simulador.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		JLabel lblAmplitude = new JLabel("Informe a amplitude:");
 		
@@ -56,7 +56,7 @@ public class Simulacao {
 		JSlider slider_1 = new JSlider();
 		
 		JSlider slider_2 = new JSlider();
-		GroupLayout gl_contentPane = new GroupLayout(simulacao);
+		GroupLayout gl_contentPane = new GroupLayout(simulador);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
@@ -117,11 +117,11 @@ public class Simulacao {
 						.addComponent(btnSimular))
 					.addContainerGap(166, Short.MAX_VALUE))
 		);
-		simulacao.setLayout(gl_contentPane);
+		simulador.setLayout(gl_contentPane);
 		
-		btnVoltar.addActionListener(new AcoesSimulacao(simulacao, tela));
+		btnVoltar.addActionListener(new AcoesSimulacao(simulador, tela));
 		
-		tela.add(simulacao);
+		tela.add(simulador);
 		
 		tela.setVisible(true);
 		
